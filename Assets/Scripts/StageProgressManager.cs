@@ -1,7 +1,7 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /// <summary>
-/// ƒXƒe[ƒW‚Ìi’»iƒNƒŠƒAó‹µj‚ğŠÇ—‚·‚é
+/// ã‚¹ãƒ†ãƒ¼ã‚¸ã®é€²æ—ï¼ˆã‚¯ãƒªã‚¢çŠ¶æ³ï¼‰ã‚’ç®¡ç†ã™ã‚‹
 /// </summary>
 public class StageProgressManager
 {
@@ -9,10 +9,6 @@ public class StageProgressManager
 
     private readonly SaveManager saveManager;
     private StageSaveData StageData => saveManager.Data.stage;
-
-    // ƒeƒXƒg‚Ì‚İƒXƒe[ƒW‚ğ1,2,4,6‚Ì‡‚ÉŠJ•ú‚·‚é
-    private int[] testStageIndex = { 0, 1, 3, 5 };
-
 
     public StageProgressManager(SaveManager saveManager)
     {
@@ -27,13 +23,23 @@ public class StageProgressManager
         //{
         //    StageData.isStageUnlocked[stageIndex + 1] = true;
         //}
-        if (StageData.isStageUnlocked[testStageIndex[stageIndex + 1]] == false)
+
+        if (StageData.isStageUnlocked[TestStageIndexReturn(stageIndex)] == false)
         {
-            StageData.isStageUnlocked[testStageIndex[stageIndex + 1]] = true;
+            StageData.isStageUnlocked[TestStageIndexReturn(stageIndex)] = true;
         }
 
         saveManager.Save();
     }
+
+    // --- ãƒ†ã‚¹ãƒˆç”¨ã‚¹ãƒ†ãƒ¼ã‚¸è§£æ”¾ 1 -> 2 -> 4 -> 6 ---
+    private int TestStageIndexReturn(int stageIndex) => stageIndex switch
+    {
+        0 => 1,
+        1 => 3,
+        3 => 5,
+        _ => 0
+    };
 
     public int GetClearRank(int stageIndex)
     {

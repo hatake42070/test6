@@ -1,5 +1,5 @@
-using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+ï»¿using UnityEngine;
+using VContainer;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private Animator playerAnimator;
     private Transform playerTransform;
+    private AudioManager audioManager;
+    private bool isSEPlayed;
 
     private void Awake()
     {
@@ -18,6 +20,13 @@ public class PlayerController : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         AnimationReset();
         SetFacing(startFacingRight);
+        isSEPlayed = false;
+    }
+
+    [Inject]
+    public void Construct(AudioManager audioManager)
+    {
+        this.audioManager = audioManager;
     }
 
     private void SetFacing(bool startFacingRight)
@@ -44,11 +53,11 @@ public class PlayerController : MonoBehaviour
 
     public void GoalAnimation(Transform girlTransform)
     {
-        // girlfriend‚ÌêŠ‚Å¶‰E”½“]‚·‚é
+        // girlfriendã®å ´æ‰€ã§å·¦å³åè»¢ã™ã‚‹
         FaceDirection(girlTransform);
 
         if (playerAnimator == null) return;
-        // ‘Ì‚ÌŒü‚«‚ğ³‚µ‚Ä•¨—‚ğOFF‚É‚·‚é
+        // ä½“ã®å‘ãã‚’æ­£ã—ã¦ç‰©ç†ã‚’OFFã«ã™ã‚‹
         playerRb.simulated = false;
         playerTransform.rotation = Quaternion.identity;
 
@@ -57,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public void DeathAnimation(Vector2 direction)
     {
-        // ˆÚ“®‚Æ‰ñ“]‚Ì¨‚¢‚ğƒŠƒZƒbƒg
+        // ç§»å‹•ã¨å›è»¢ã®å‹¢ã„ã‚’ãƒªã‚»ãƒƒãƒˆ
         playerRb.linearVelocity = Vector2.zero;
         playerRb.angularVelocity = 0f;
 
@@ -69,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     private void FaceDirection(Transform girlTransform)
     {
-        // ”Ş—‚ÌêŠ‚É‚æ‚Á‚ÄƒS[ƒ‹‚ÌŠç‚ÌŒü‚«‚ğ•Ï‚¦‚é
+        // å½¼å¥³ã®å ´æ‰€ã«ã‚ˆã£ã¦ã‚´ãƒ¼ãƒ«æ™‚ã®é¡”ã®å‘ãã‚’å¤‰ãˆã‚‹
         float differenceX = girlTransform.position.x - transform.position.x;
         if (differenceX <= 0)
         {
@@ -81,5 +90,12 @@ public class PlayerController : MonoBehaviour
             startFacingRight = true;
             SetFacing(startFacingRight);
         }
+    }
+
+    public void PlayerDeathSE()
+    {
+        if (isSEPlayed) return;
+        isSEPlayed = true;
+        audioManager.PlaySE("goal_sad");
     }
 }

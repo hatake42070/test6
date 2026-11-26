@@ -1,4 +1,4 @@
-using VContainer;
+﻿using VContainer;
 using VContainer.Unity;
 
 public class StageLifetimeScope : LifetimeScope
@@ -7,6 +7,6 @@ public class StageLifetimeScope : LifetimeScope
     {
         builder.RegisterComponentInHierarchy<StageManager>();
         builder.RegisterComponentInHierarchy<TutorialManager>();
-        builder.RegisterComponentInHierarchy<PauseManager>();
+        builder.Register<PauseManager>(Lifetime.Scoped);
     }
 }

@@ -1,10 +1,10 @@
-using System;
+ï»¿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class StageButtonUI : MonoBehaviour
 {
-    [SerializeField] private Image buttonImage;  // ƒXƒe[ƒWƒ{ƒ^ƒ“‰æ‘œ‚Ì”z’uŽQÆ
+    [SerializeField] private Image buttonImage;  // ã‚¹ãƒ†ãƒ¼ã‚¸ãƒœã‚¿ãƒ³ç”»åƒã®é…ç½®å‚ç…§
     [SerializeField] private Image rankImage;
     [SerializeField] private Button button;
     private int myStageIndex;
@@ -23,7 +23,7 @@ public class StageButtonUI : MonoBehaviour
         state.pressedSprite = pressedImage;
         button.spriteState = state;
 
-        button.onClick.RemoveAllListeners();
+        // button.onClick.RemoveAllListeners();
         button.onClick.AddListener(() => onClickCallback?.Invoke(myStageIndex));
     }
 }

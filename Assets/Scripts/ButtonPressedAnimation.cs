@@ -1,26 +1,31 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 /// <summary>
-/// ƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½‚Æ‚«‚É¬‚³‚­‚È‚éƒ{ƒ^ƒ“‚ÉƒAƒ^ƒbƒ`‚·‚é
+/// ãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ãŸã¨ãã«å°ã•ããªã‚‹ãƒœã‚¿ãƒ³ã«ã‚¢ã‚¿ãƒƒãƒã™ã‚‹
 /// </summary>
 public class ButtonPressedAnimation : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private Vector2 originalScale;
     private Vector2 pressedScale = new Vector2(0.9f, 0.9f);
+    private bool isButtnEnable;
+    private Button button;
 
     private void Start()
     {
+        button = GetComponent<Button>();
         originalScale = transform.localScale;
     }
 
-    // ƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½‚Æ‚«
+    // ãƒœã‚¿ãƒ³ãŒæŠ¼ã•ã‚ŒãŸã¨ã
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (button.isActiveAndEnabled == false || button.interactable == false) return;
         transform.localScale = Vector2.Scale(originalScale, pressedScale);
     }
 
-    // ƒ{ƒ^ƒ“‚©‚çw‚âƒ}ƒEƒX‚ª—£‚ê‚½‚Æ‚«
+    // ãƒœã‚¿ãƒ³ã‹ã‚‰æŒ‡ã‚„ãƒã‚¦ã‚¹ãŒé›¢ã‚ŒãŸã¨ã
     public void OnPointerUp(PointerEventData eventData)
     {
         transform.localScale = originalScale;

@@ -1,5 +1,5 @@
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
+using VContainer;
 
 public class FanController : MonoBehaviour
 {
@@ -14,11 +14,19 @@ public class FanController : MonoBehaviour
 
     [SerializeField] private float windForce = 60f;
 
+    private AudioManager audioManager;
+
     private void Awake()
     {
         AnimationReset();
         fanCollider = GetComponent<BoxCollider2D>();
         Debug.Log(fanCollider);
+    }
+
+    [Inject]
+    public void Construct(AudioManager audioManager)
+    {
+        this.audioManager = audioManager;
     }
 
     public void Initialize(StageManager stageManager)
@@ -47,11 +55,12 @@ public class FanController : MonoBehaviour
                     fanAnimator.SetBool("mouse_up", false);
                     fanAnimator.SetBool("mouse_down", true);
                 }
-                if(windAnimator != null)
+                if (windAnimator != null)
                 {
                     windAnimator.SetBool("mouse_down", true);
                     windAnimator.SetBool("mouse_up", false);
                 }
+                audioManager.PlaySELoop("se_gim_fan");
             }
         }
 
@@ -63,11 +72,12 @@ public class FanController : MonoBehaviour
                 fanAnimator.SetBool("mouse_down", false);
                 fanAnimator.SetBool("mouse_up", true);
             }
-            if(windAnimator != null)
+            if (windAnimator != null)
             {
                 windAnimator.SetBool("mouse_down", false);
                 windAnimator.SetBool("mouse_up", true);
             }
+            audioManager.StopSELoop();
             Debug.Log("Fan Released!");
         }
     }

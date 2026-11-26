@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using VContainer;
@@ -10,10 +10,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixer mainMixer;
     [SerializeField] private AudioMixerGroup bgmMixerGroup;
     [SerializeField] private AudioMixerGroup seMixerGroup;
+    [SerializeField] private AudioMixerGroup seLoopMixerGroup;
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource bgmSource;
     [SerializeField] private AudioSource seSource;
+    [SerializeField] private AudioSource seLoopSource;
 
     [Header("Sound Lists")]
     [SerializeField] private List<AudioClip> bgmList = new List<AudioClip>();
@@ -66,6 +68,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySELoop(string seName)
+    {
+        if (seDictionary.TryGetValue(seName, out AudioClip se))
+        {
+            seLoopSource.clip = se;
+            seLoopSource.Play();
+        }
+    }
+
+    public void StopSELoop()
+    {
+        seLoopSource.Stop();
+    }
+
     public void SetMuted(bool isMuted)
     {
         ApplyMute(isMuted);
@@ -78,5 +94,6 @@ public class AudioManager : MonoBehaviour
         _isMuted = isMuted;
         bgmSource.mute = _isMuted;
         seSource.mute = _isMuted;
+        seLoopSource.mute = _isMuted;
     }
 }

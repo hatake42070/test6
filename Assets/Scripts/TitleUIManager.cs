@@ -1,3 +1,5 @@
+ï»¿using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -9,6 +11,7 @@ public class TitleUIManager : MonoBehaviour
     [SerializeField] private Button optionButton;
     [SerializeField] private Button closeOptionPanel;
     [SerializeField] private GameObject optionPanel;
+    [SerializeField] private Animator optionAnimator;
     [SerializeField] private Button exitButton;
     [SerializeField] private GameObject exitPanel;
     [SerializeField] private Button exitConfirmButton;
@@ -43,25 +46,38 @@ public class TitleUIManager : MonoBehaviour
     private void OpenOptionPanel()
     {
         optionPanel.SetActive(true);
+        optionAnimator.SetBool("OptionClose", false);
+        optionAnimator.SetBool("OptionOpen", true);
         exitButton.enabled = false;
+        optionButton.enabled = false;
+        SetDimmed(true);
     }
 
-    private void CloseSettingPanel()
+    private async void CloseSettingPanel()
     {
+        optionAnimator.SetBool("OptionOpen", false);
+        optionAnimator.SetBool("OptionClose", true);
+        await Task.Delay(TimeSpan.FromSeconds(0.3));
         optionPanel.SetActive(false);
         exitButton.enabled = true;
+        optionButton.enabled = true;
+        SetDimmed(false);
     }
 
     private void OpenExitPanel()
     {
         exitPanel.SetActive(true);
         optionButton.enabled = false;
+        exitButton.enabled = false;
+        SetDimmed(true);
     }
 
     private void CloseExitPanel()
     {
         exitPanel.SetActive(false);
         optionButton.enabled = true;
+        exitButton.enabled = true;
+        SetDimmed(false);
     }
 
     private void OnClickMuteButton()
@@ -75,7 +91,23 @@ public class TitleUIManager : MonoBehaviour
         muteButton.image.sprite = audioManager.IsMuted ? soundOff : soundOn;
     }
 
-    // ƒQ[ƒ€I—¹ˆ—iUnityƒGƒfƒBƒ^‚Æƒrƒ‹ƒhŒã‚Åˆ—‚ğ•Ï‚¦‚éj
+    // ãƒ‘ãƒãƒ«ã‚’é–‹ã„ãŸã¨ãã«ã‚ªãƒ—ã‚·ãƒ§ãƒ³ï¼ŒExitãƒœã‚¿ãƒ³ã‚’æš—ãã™ã‚‹å‡¦ç†
+    private void SetDimmed(bool isDimmed)
+    {
+        if (isDimmed)
+        {
+            exitButton.image.color = new Color32(150, 150, 150, 255);
+            optionButton.image.color = new Color32(150, 150, 150, 255);
+        }
+        else
+        {
+            exitButton.image.color = new Color32(255, 255, 255, 255);
+            optionButton.image.color = new Color32(255, 255, 255, 255);
+        }
+
+    }
+
+    // ã‚²ãƒ¼ãƒ çµ‚äº†å‡¦ç†ï¼ˆUnityã‚¨ãƒ‡ã‚£ã‚¿ã¨ãƒ“ãƒ«ãƒ‰å¾Œã§å‡¦ç†ã‚’å¤‰ãˆã‚‹ï¼‰
     private void GameExit()
     {
 #if UNITY_EDITOR

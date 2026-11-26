@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,9 +9,9 @@ public enum PauseReason
     TutorialPause
 }
 
-public class PauseManager : MonoBehaviour
+public class PauseManager
 {
-    // HashSet‚Åƒ|[ƒY‚Ì——R‚ğ‚ÂD‚»‚ê‚ç‚ª‹ó‚Ì‚ÉResume‚·‚é
+    // HashSetã§ãƒãƒ¼ã‚ºã®ç†ç”±ã‚’æŒã¤ï¼ãã‚Œã‚‰ãŒç©ºã®æ™‚ã«Resumeã™ã‚‹
     private HashSet<PauseReason> pauseReasons = new HashSet<PauseReason>();
     public event Action OnPauseReasonChanged = delegate { };
 
@@ -39,13 +39,13 @@ public class PauseManager : MonoBehaviour
         GameResume();
     }
 
-    // ƒQ[ƒ€ƒ|[ƒY
+    // ã‚²ãƒ¼ãƒ ãƒãƒ¼ã‚º
     public void GamePause()
     {
         Time.timeScale = 0;
     }
 
-    // ƒ|[ƒY‰ğœ
+    // ãƒãƒ¼ã‚ºè§£é™¤
     public void GameResume()
     {
         Time.timeScale = 1;
@@ -56,7 +56,7 @@ public class PauseManager : MonoBehaviour
         return pauseReasons.Contains(reason);
     }
 
-    // ‰½‚©ˆê‚Â‚Å‚à—v‘f‚ª‚ ‚é‚©
+    // ä½•ã‹ä¸€ã¤ã§ã‚‚è¦ç´ ãŒã‚ã‚‹ã‹
     public bool HasAnyPauseReason()
     {
         return pauseReasons.Count > 0 ? true : false;

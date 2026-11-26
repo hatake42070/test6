@@ -1,4 +1,5 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
+using VContainer;
 
 public class MagnetController : MonoBehaviour
 {
@@ -12,11 +13,18 @@ public class MagnetController : MonoBehaviour
     [SerializeField] private MagnetArea magnetArea;
 
     [SerializeField] private float attractionForce = 10f;
+    private AudioManager audioManager;
 
     private void Awake()
     {
         waveAnim.gameObject.SetActive(false);
         magnetCollider = GetComponent<BoxCollider2D>();
+    }
+
+    [Inject]
+    public void Construct(AudioManager audioManager)
+    {
+        this.audioManager = audioManager;
     }
 
     public void Initialize(StageManager stageManager)
@@ -26,36 +34,6 @@ public class MagnetController : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetMouseButtonDown(0) && stageManager != null && stageManager.CanOperateGimmicks)
-        //{
-        //    Vector2 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //    isPressed = magnetCollider.OverlapPoint(position);
-        //    Debug.Log(isPressed);
-
-        //    if (isPressed)
-        //    {
-        //        Debug.Log("Magnet Clicked!");
-        //        if (animator != null)
-        //        {
-        //            animator.SetBool("gim_up_flag", false);
-        //            animator.SetBool("gim_down_flag", true);
-        //        }
-        //        waveAnim.gameObject.SetActive(true);
-        //    }
-        //}
-
-        //if (Input.GetMouseButtonUp(0) && isPressed)
-        //{
-        //    isPressed = false;
-        //    if (animator != null)
-        //    {
-        //        animator.SetBool("gim_down_flag", false);
-        //        animator.SetBool("gim_up_flag", true);
-        //    }
-        //    waveAnim.gameObject.SetActive(false);
-        //    Debug.Log("Magnet Released!");
-        //}
-
         if (Input.GetMouseButtonDown(0) && stageManager != null && stageManager.CanOperateGimmicks)
         {
             Vector2 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -71,26 +49,29 @@ public class MagnetController : MonoBehaviour
                     animator.SetBool("gim_down_flag", true);
                 }
                 waveAnim.gameObject.SetActive(true);
+                audioManager.PlaySELoop("magnet_on_1");
             }
+        }
 
-            if (Input.GetMouseButtonUp(0) && isPressed)
+        if (Input.GetMouseButtonUp(0) && isPressed)
+        {
+            isPressed = false;
+            if (animator != null)
             {
-                isPressed = false;
-                if (animator != null)
-                {
-                    animator.SetBool("gim_down_flag", false);
-                    animator.SetBool("gim_up_flag", true);
-                }
-                waveAnim.gameObject.SetActive(false);
-                Debug.Log("Magnet Released!");
+                animator.SetBool("gim_down_flag", false);
+                animator.SetBool("gim_up_flag", true);
             }
+            waveAnim.gameObject.SetActive(false);
+            audioManager.StopSELoop();
+            audioManager.PlaySE("magnet_off_1");
+            Debug.Log("Magnet Released!");
         }
     }
 
-    // à¯Ç´ÇÊÇπÉAÉjÉÅÅ[ÉVÉáÉì
+    // Âºï„Åç„Çà„Åõ„Ç¢„Éã„É°„Éº„Ç∑„Éß„É≥
     private void AttractAnimation()
     {
-        // à¯Ç´äÒÇπÉAÉjÉÅÅ[ÉVÉáÉìÇÃçƒê∂
+        // Âºï„ÅçÂØÑ„Åõ„Ç¢„Éã„É°„Éº„Ç∑„Éß„É≥„ÅÆÂÜçÁîü
         waveAnim.gameObject.SetActive(true);
     }
 

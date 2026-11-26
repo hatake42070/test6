@@ -1,6 +1,7 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using VContainer.Unity;
 
 public class StageSelectionUI : MonoBehaviour
 {
@@ -10,18 +11,21 @@ public class StageSelectionUI : MonoBehaviour
     [SerializeField] private Button goToTitleButton;
     [SerializeField] private StageButtonUI stageButtonPrefab;
     [SerializeField] private Transform[] rows;
-    [SerializeField] private Sprite[] stageButtonImages; // 20–‡‚ÌƒXƒe[ƒW‰æ‘œ
+    [SerializeField] private Sprite[] stageButtonImages; // 20æšã®ã‚¹ãƒ†ãƒ¼ã‚¸ç”»åƒ
     [SerializeField] private Sprite[] pressedStageButtonImages;
     [SerializeField] private Sprite[] stageClearRankImages;
     [SerializeField] private Sprite lockedStageImage;
     [SerializeField] private GameObject buttonPanel;
 
+    private IObjectResolver resolver;
+
 
     [Inject]
-    public void Construct(SequenceManager sequenceManager, StageProgressManager stageProgressManager)
+    public void Construct(SequenceManager sequenceManager, StageProgressManager stageProgressManager, IObjectResolver resolver)
     {
         this.sequenceManager = sequenceManager;
         this.stageProgressManager = stageProgressManager;
+        this.resolver = resolver;
     }
 
     private void Awake()
@@ -41,8 +45,9 @@ public class StageSelectionUI : MonoBehaviour
     {
         for (int stageIndex = 0; stageIndex < stageButtonImages.Length; stageIndex++)
         {
-            int rowIndex = stageIndex / 5;  // 1s‚Ì‚T‚Â‚¸‚Âƒ{ƒ^ƒ“‚ğ”z’u‚·‚é
-            StageButtonUI buttonUI = Instantiate(stageButtonPrefab, rows[rowIndex]);
+            int rowIndex = stageIndex / 5;  // 1è¡Œã®ï¼•ã¤ãšã¤ãƒœã‚¿ãƒ³ã‚’é…ç½®ã™ã‚‹
+            // StageButtonUI buttonUI = Instantiate(stageButtonPrefab, rows[rowIndex]);
+            StageButtonUI buttonUI = resolver.Instantiate(stageButtonPrefab, rows[rowIndex]);
 
             int rank = stageProgressManager.GetClearRank(stageIndex);
             bool isUnlocked = stageProgressManager.IsStageUnlocked(stageIndex);
@@ -63,7 +68,7 @@ public class StageSelectionUI : MonoBehaviour
         Debug.Log(stageIndex);
         stageProgressManager.SetNextStageIndex(stageIndex);
 
-        if(stageIndex == 0)
+        if (stageIndex == 0)
         {
             sequenceManager.ChangeScene("OpeningScene");
         }
@@ -73,7 +78,7 @@ public class StageSelectionUI : MonoBehaviour
         }
     }
 
-    // --- ƒfƒoƒbƒN—p ---
+    // --- ãƒ‡ãƒãƒƒã‚¯ç”¨ ---
 #if UNITY_EDITOR
     private void Update()
     {
@@ -83,7 +88,7 @@ public class StageSelectionUI : MonoBehaviour
         if (controlHeld && Input.GetKeyDown(KeyCode.R))
         {
             stageProgressManager.ResetSaveData();
-            Debug.Log("ƒZ[ƒuƒf[ƒ^‚ğ‰Šú‰»‚µ‚Ü‚µ‚½");
+            Debug.Log("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’åˆæœŸåŒ–ã—ã¾ã—ãŸ");
         }
     }
 #endif

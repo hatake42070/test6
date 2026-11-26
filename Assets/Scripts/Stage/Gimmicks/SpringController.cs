@@ -1,4 +1,5 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using VContainer;
 
 public class SpringController : MonoBehaviour
 {
@@ -8,9 +9,17 @@ public class SpringController : MonoBehaviour
     private CircleCollider2D playerCollider;
     [SerializeField] float launchPower = 10f;
 
+    private AudioManager audioManager;
+
     private void Awake()
     {
         springCollider = GetComponent<BoxCollider2D>();
+    }
+
+    [Inject]
+    public void Construct(AudioManager audioManager)
+    {
+        this.audioManager = audioManager;
     }
 
     public void Initialize(StageManager stageManager, CircleCollider2D playerCollider)
@@ -21,7 +30,7 @@ public class SpringController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && stageManager !=  null && stageManager.CanOperateGimmicks) // ƒNƒŠƒbƒNŠ´’m
+        if (Input.GetMouseButtonDown(0) && stageManager != null && stageManager.CanOperateGimmicks) // ã‚¯ãƒªãƒƒã‚¯æ„ŸçŸ¥
         {
             Vector2 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (springCollider.OverlapPoint(position))
@@ -33,9 +42,10 @@ public class SpringController : MonoBehaviour
 
     private void OnSpring()
     {
-        if(animator != null)
+        if (animator != null)
         {
             animator.SetBool("spring_up_flag", true);
+            audioManager.PlaySE("bane_2");
         }
     }
 
@@ -46,8 +56,8 @@ public class SpringController : MonoBehaviour
             animator.SetBool("spring_up_flag", false);
         }
     }
-    
-    // ƒAƒjƒ[ƒVƒ‡ƒ“ƒCƒxƒ“ƒg‚©‚çŒÄ‚Î‚êA‚Î‚Ë‚ªL‚Ñ‚«‚Á‚½‚ÉƒvƒŒƒCƒ„[‚ğãŒü‚«‚É‘Å‚¿ã‚°‚é
+
+    // ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚¤ãƒ™ãƒ³ãƒˆã‹ã‚‰å‘¼ã°ã‚Œã€ã°ã­ãŒä¼¸ã³ãã£ãŸæ™‚ã«ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ä¸Šå‘ãã«æ‰“ã¡ä¸Šã’ã‚‹
     private void LaunchPlayer()
     {
         if (playerCollider == null || !springCollider.IsTouching(playerCollider)) return;
