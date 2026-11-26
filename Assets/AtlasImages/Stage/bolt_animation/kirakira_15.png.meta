@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 42af74f24e383ed458ba5e82b384e2b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3859955192823735541
+    second: kirakira_15_0
+  - first:
+      213: -7968734486691595708
+    second: kirakira_15_1
+  - first:
+      213: -3548911098100554415
+    second: kirakira_15_2
+  - first:
+      213: 3527678435326835375
+    second: kirakira_15_3
+  - first:
+      213: 6755029857602677561
+    second: kirakira_15_4
+  - first:
+      213: -2355467856555182180
+    second: kirakira_15_5
+  - first:
+      213: -1729606716678386086
+    second: kirakira_15_6
+  - first:
+      213: -8308583746900192425
+    second: kirakira_15_7
+  - first:
+      213: -5016230891693790562
+    second: kirakira_15_8
+  - first:
+      213: -3380747460361493932
+    second: kirakira_15_9
+  - first:
+      213: 5000730794544154148
+    second: kirakira_15_10
+  - first:
+      213: 7411956820678296484
+    second: kirakira_15_11
+  - first:
+      213: 2888753623607212495
+    second: kirakira_15_12
+  - first:
+      213: 8943495145969547988
+    second: kirakira_15_13
+  - first:
+      213: -5125716404209811973
+    second: kirakira_15_14
+  - first:
+      213: 6482158438073682361
+    second: kirakira_15_15
+  - first:
+      213: -1747321133698284657
+    second: kirakira_15_16
+  - first:
+      213: 913369307522572899
+    second: kirakira_15_17
+  - first:
+      213: -7958092084885545667
+    second: kirakira_15_18
+  - first:
+      213: -2938643429468149342
+    second: kirakira_15_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kirakira_15_0
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 723
+        width: 85
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4ee250cc0519530800000000000000
+      internalID: 3859955192823735541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 699
+        width: 111
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ab75b543e596190800000000000000
+      internalID: -7968734486691595708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 863
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1556642c82cbfbec0800000000000000
+      internalID: -3548911098100554415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 605
+        width: 205
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa3673b8d4d4f030800000000000000
+      internalID: 3527678435326835375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 683
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ba095addfaebd50800000000000000
+      internalID: 6755029857602677561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 595
+        width: 111
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c977d2ad672bf4fd0800000000000000
+      internalID: -2355467856555182180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 577
+        width: 31
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e4143ead33ff7e0800000000000000
+      internalID: -1729606716678386086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 535
+        width: 55
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7531e6b5a1bf1bc80800000000000000
+      internalID: -8308583746900192425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_8
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 183
+        width: 231
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a2045c494c26ab0800000000000000
+      internalID: -5016230891693790562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_9
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 347
+        width: 215
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45269d5c81c2511d0800000000000000
+      internalID: -3380747460361493932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_10
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 473
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4264922a92a266540800000000000000
+      internalID: 5000730794544154148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 387
+        width: 43
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3401b457f8cd660800000000000000
+      internalID: 7411956820678296484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_12
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 463
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9faba8d1ae61820800000000000000
+      internalID: 2888753623607212495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_13
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 455
+        width: 75
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4daf1f9537dad1c70800000000000000
+      internalID: 8943495145969547988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_14
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 401
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd7eab661ccdd8b0800000000000000
+      internalID: -5125716404209811973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 361
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9ce2761c045f950800000000000000
+      internalID: 6482158438073682361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_16
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 275
+        width: 73
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f838165cfa440c7e0800000000000000
+      internalID: -1747321133698284657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_17
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 243
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362a0a3cb80fcac00800000000000000
+      internalID: 913369307522572899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_18
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 203
+        width: 37
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d9c8e996d2f8190800000000000000
+      internalID: -7958092084885545667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirakira_15_19
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 179
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9e309de57d737d0800000000000000
+      internalID: -2938643429468149342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kirakira_15_0: 3859955192823735541
+      kirakira_15_1: -7968734486691595708
+      kirakira_15_10: 5000730794544154148
+      kirakira_15_11: 7411956820678296484
+      kirakira_15_12: 2888753623607212495
+      kirakira_15_13: 8943495145969547988
+      kirakira_15_14: -5125716404209811973
+      kirakira_15_15: 6482158438073682361
+      kirakira_15_16: -1747321133698284657
+      kirakira_15_17: 913369307522572899
+      kirakira_15_18: -7958092084885545667
+      kirakira_15_19: -2938643429468149342
+      kirakira_15_2: -3548911098100554415
+      kirakira_15_3: 3527678435326835375
+      kirakira_15_4: 6755029857602677561
+      kirakira_15_5: -2355467856555182180
+      kirakira_15_6: -1729606716678386086
+      kirakira_15_7: -8308583746900192425
+      kirakira_15_8: -5016230891693790562
+      kirakira_15_9: -3380747460361493932
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

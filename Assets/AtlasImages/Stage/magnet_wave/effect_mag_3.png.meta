@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: f8720dbbacf5d0743bd6cda49f188138
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8525444471406956619
+    second: effect_mag_3_0
+  - first:
+      213: -845252524662128516
+    second: effect_mag_3_1
+  - first:
+      213: -8629938299686832426
+    second: effect_mag_3_2
+  - first:
+      213: -1817494429957457471
+    second: effect_mag_3_3
+  - first:
+      213: -5625751726270960955
+    second: effect_mag_3_4
+  - first:
+      213: -1948161374087020602
+    second: effect_mag_3_5
+  - first:
+      213: 4227086375987123581
+    second: effect_mag_3_6
+  - first:
+      213: 1375708859834500348
+    second: effect_mag_3_7
+  - first:
+      213: -3447068377219316536
+    second: effect_mag_3_8
+  - first:
+      213: 4746018527028284827
+    second: effect_mag_3_9
+  - first:
+      213: -2316966449559659737
+    second: effect_mag_3_10
+  - first:
+      213: -6075151019324070750
+    second: effect_mag_3_11
+  - first:
+      213: 8827082353107251252
+    second: effect_mag_3_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: effect_mag_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 23
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b409786b396705670800000000000000
+      internalID: 8525444471406956619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c700302ae4f0544f0800000000000000
+      internalID: -845252524662128516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6b0adf6dc4c3880800000000000000
+      internalID: -8629938299686832426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c972290276f6c6e0800000000000000
+      internalID: -1817494429957457471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca24198c905de1b0800000000000000
+      internalID: -5625751726270960955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cff7645d8db6f4e0800000000000000
+      internalID: -1948161374087020602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d751b93b9a0a9aa30800000000000000
+      internalID: 4227086375987123581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_7
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf40bc05bef771310800000000000000
+      internalID: 1375708859834500348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_8
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c44c53039d8920d0800000000000000
+      internalID: -3447068377219316536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_9
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d81f074be3dd140800000000000000
+      internalID: 4746018527028284827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b9f793a4b78dfd0800000000000000
+      internalID: -2316966449559659737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_11
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 209
+        width: 28
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a42650e55ab0bba0800000000000000
+      internalID: -6075151019324070750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_mag_3_12
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 209
+        width: 34
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430b31cd1a8108a70800000000000000
+      internalID: 8827082353107251252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      effect_mag_3_0: 8525444471406956619
+      effect_mag_3_1: -845252524662128516
+      effect_mag_3_10: -2316966449559659737
+      effect_mag_3_11: -6075151019324070750
+      effect_mag_3_12: 8827082353107251252
+      effect_mag_3_2: -8629938299686832426
+      effect_mag_3_3: -1817494429957457471
+      effect_mag_3_4: -5625751726270960955
+      effect_mag_3_5: -1948161374087020602
+      effect_mag_3_6: 4227086375987123581
+      effect_mag_3_7: 1375708859834500348
+      effect_mag_3_8: -3447068377219316536
+      effect_mag_3_9: 4746018527028284827
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,12 @@
+using VContainer;
+using VContainer.Unity;
+
+public class StageLifetimeScope : LifetimeScope
+{
+    protected override void Configure(IContainerBuilder builder)
+    {
+        builder.RegisterComponentInHierarchy<StageManager>();
+        builder.RegisterComponentInHierarchy<TutorialManager>();
+        builder.RegisterComponentInHierarchy<PauseManager>();
+    }
+}
